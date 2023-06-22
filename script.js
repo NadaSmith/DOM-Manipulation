@@ -15,3 +15,11 @@ Select DOM's Favorite Things list and remove the last list item.*/
 const favoriteThingsList = document.querySelector('#favorite-things');
 const lastListItem = favoriteThingsList.lastElementChild;
 favoriteThingsList.removeChild(lastListItem);
+
+/* Part 4
+Select all .special-titleclass elements and change their font-sizeto 2rem. Remember 
+you might have to iterate through the list of elements */
+const specialTitles = document.querySelectorAll('.special-title');
+specialTitles.forEach((title) => {
+  title.style.fontSize = '2rem';
+});
