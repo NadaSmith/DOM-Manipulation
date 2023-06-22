@@ -70,3 +70,21 @@ const randomQuote = function() {
 randomQuotewhenever #quote-titleis clicked.*/
 const quoteTitle = document.querySelector('#quote-title');
 quoteTitle.addEventListener('click', randomQuote);
+
+
+/* Part 9
+Select all .blog-postclass elements. Iterate through the list of .blog-postclass elements and apply two event handlers 
+to each node. The first event handler should be listening for mouseoutevents while the second handler should be listening 
+for mouseenterevents. The mouseouthandler should toggle the class .purple The mouseenterhandler should toggle the class .red */
+const blogPosts = document.querySelectorAll('.blog-post');
+blogPosts.forEach((post) => {
+  post.addEventListener('mouseout', function() {
+    this.classList.toggle('purple');
+  });
+
+  post.addEventListener('mouseenter', function() {
+    this.classList.toggle('red');
+  });
+});
+
+randomQuote();
