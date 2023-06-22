@@ -56,3 +56,17 @@ newBlogPost.appendChild(newBlogPostContent);
 
 const blogSection = document.querySelector('.main');
 blogSection.appendChild(newBlogPost);
+
+//-----------------------------------------Event Handlers---------------------------------------
+
+/* Part 8
+When you reload the page, the script.jsfile loads a random DOM quote. Let's play with the 
+included function: */
+const randomQuote = function() {
+  document.querySelector('#quote-of-the-day').innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+};
+
+/* Query select the #quote-titleID element and add a click event handler. That event handler should use the function 
+randomQuotewhenever #quote-titleis clicked.*/
+const quoteTitle = document.querySelector('#quote-title');
+quoteTitle.addEventListener('click', randomQuote);
