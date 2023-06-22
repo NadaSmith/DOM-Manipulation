@@ -38,3 +38,21 @@ name of a city, and append it to the Past Races list.*/
 const newRace = document.createElement('li');
 newRace.textContent = 'New York';
 pastRacesList.appendChild(newRace);
+
+/* Part 7
+Create a new .blog-postcorresponding to the new city added in Part 6. You will have to create 
+a new <div>with class of .blog-post, a new <h2>with text, and a new <p>with some text. Think 
+about what order you want to create the elements, and what order you want to append them in. */
+const newBlogPost = document.createElement('div');
+newBlogPost.classList.add('blog-post');
+
+const newBlogPostTitle = document.createElement('h2');
+newBlogPostTitle.textContent = 'New York Adventure';
+newBlogPost.appendChild(newBlogPostTitle);
+
+const newBlogPostContent = document.createElement('p');
+newBlogPostContent.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+newBlogPost.appendChild(newBlogPostContent);
+
+const blogSection = document.querySelector('.main');
+blogSection.appendChild(newBlogPost);
