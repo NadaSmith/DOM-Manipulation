@@ -9,3 +9,9 @@ mainTitle.textContent = 'Shorter Title';
 Select the bodyand change the background-color to a new color of your choice. */
 const body = document.querySelector('body');
 body.style.backgroundColor = 'lightblue';
+
+/* Part 3
+Select DOM's Favorite Things list and remove the last list item.*/
+const favoriteThingsList = document.querySelector('#favorite-things');
+const lastListItem = favoriteThingsList.lastElementChild;
+favoriteThingsList.removeChild(lastListItem);
