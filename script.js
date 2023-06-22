@@ -23,3 +23,9 @@ const specialTitles = document.querySelectorAll('.special-title');
 specialTitles.forEach((title) => {
   title.style.fontSize = '2rem';
 });
+
+/* Part 5
+Turns out DOM never raced in Chicago. Access the Past Races list and remove Chicago. */
+const pastRacesList = document.querySelector('#past-races');
+const chicagoRace = pastRacesList.querySelector('li[data-place="chicago"]');
+pastRacesList.removeChild(chicagoRace);
