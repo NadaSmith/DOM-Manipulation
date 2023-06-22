@@ -29,3 +29,12 @@ Turns out DOM never raced in Chicago. Access the Past Races list and remove Chic
 const pastRacesList = document.querySelector('#past-races');
 const chicagoRace = pastRacesList.querySelector('li[data-place="chicago"]');
 pastRacesList.removeChild(chicagoRace);
+
+//-----------------------------------------Creating New DOM Elements--------------------------
+
+/* Part 6
+Let's add to DOM's Past Races list. Create a new <li>element, change the new <li>text to the 
+name of a city, and append it to the Past Races list.*/
+const newRace = document.createElement('li');
+newRace.textContent = 'New York';
+pastRacesList.appendChild(newRace);
